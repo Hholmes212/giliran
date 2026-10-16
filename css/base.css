@@ -23,9 +23,9 @@ main { flex: 1; outline: none; }
 
 h1, h2, h3 {
   font-family: var(--font-display);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
   margin: 0;
   text-wrap: balance;
 }
@@ -38,6 +38,8 @@ small { font-size: 0.875rem; }
 
 :focus-visible { outline: 4px solid var(--focus); outline-offset: 3px; }
 h1:focus, main:focus { outline: none; }
+/* Layar gelap (kiosk, ruang tunggu) memakai cincin fokus putih */
+.kiosk :focus-visible, .board :focus-visible { outline-color: #ffffff; }
 
 .wrap {
   width: 100%;
@@ -74,7 +76,7 @@ h1:focus, main:focus { outline: none; }
 .btn:hover { transform: translateY(-1px); }
 .btn:active { transform: translateY(1px); }
 .btn[disabled] { opacity: 0.45; cursor: not-allowed; transform: none; }
-.btn--ticket { background: var(--ticket); color: var(--on-ticket); }
+.btn--ticket { background: var(--accent); color: var(--on-accent); }
 .btn--ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
 .btn--ok { background: var(--ok); color: var(--surface); }
 .btn--xl { min-height: 4.2rem; padding: 0.9rem 2rem; font-size: 1.2rem; }
@@ -99,7 +101,7 @@ h1:focus, main:focus { outline: none; }
   grid-area: brand;
   display: inline-flex; align-items: center; gap: 0.55rem;
   font: 800 1.5rem/1 var(--font-display);
-  letter-spacing: -0.02em; color: var(--ink); text-decoration: none;
+  letter-spacing: -0.01em; color: var(--ink); text-decoration: none;
 }
 .nav { grid-area: nav; min-width: 0; }
 .nav__scroll { display: flex; gap: 0.25rem; overflow-x: auto; padding-block: 0.2rem; scrollbar-width: thin; }

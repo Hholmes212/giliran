@@ -1,84 +1,63 @@
 /* ==========================================================================
    Giliran: design tokens
    Semua warna dan ukuran dasar ada di sini. Ubah di sini, seluruh situs ikut.
+   Palet hijau-teal: warna yang biasa dipakai fasilitas kesehatan di Indonesia,
+   dengan kertas nomor putih seperti kertas antrian sungguhan.
+   Situs ini sengaja hanya satu tampilan (terang) supaya selalu sama di semua
+   perangkat. Mode gelap bisa ditambahkan nanti dengan menimpa token di bawah.
    ========================================================================== */
 
 :root {
-  /* Huruf. Atkinson Hyperlegible dirancang untuk pembaca dengan penglihatan terbatas. */
-  --font-display: "Bricolage Grotesque", "Atkinson Hyperlegible", system-ui, sans-serif;
+  /* Huruf, tiga peran:
+     judul  = Bitter, slab serif yang dirancang untuk dibaca di layar, hangat seperti papan pengumuman
+     angka  = Barlow Condensed, huruf rambu lalu lintas, supaya nomor antrian besar dan jelas dari jauh
+     isi    = Atkinson Hyperlegible, dirancang untuk pembaca dengan penglihatan terbatas */
+  --font-display: "Bitter", Georgia, "Times New Roman", serif;
+  --font-num: "Barlow Condensed", "Arial Narrow", "Atkinson Hyperlegible", sans-serif;
   --font-body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
-  /* Warna (tema terang) */
-  --paper: #f3f5fa;
+  /* Warna */
+  --paper: #f2f8f6;
   --surface: #ffffff;
-  --surface-2: #e8edf6;
-  --ink: #12203f;
-  --muted: #44516e;
-  --line: #c9d1e2;
-  --brand: #1b3a6b;
+  --surface-2: #e0efea;
+  --ink: #0d2924;
+  --muted: #3e5c55;
+  --line: #bcd5cd;
+  --brand: #0a5e50;        /* hijau tua: menu aktif, tombol utama, progres */
   --on-brand: #ffffff;
-  --focus: #0b5fff;
+  --accent: #7fe0c2;       /* hijau muda: tombol ajakan utama dan penanda nomor */
+  --on-accent: #0d2924;
+  --focus: #0d2924;
 
   /* Warna status */
-  --ok: #16714a;
-  --ok-bg: #d9f2e5;
+  --ok: #0a7a4f;
+  --ok-bg: #d4f1e3;
   --warn: #8a4b00;
   --warn-bg: #ffe8c4;
 
-  /* Kertas nomor antrian: sama di tema terang dan gelap, seperti kertas sungguhan */
-  --ticket: #ffc53d;
-  --on-ticket: #2b2000;
-  --ticket-go: #16714a;
+  /* Kertas nomor antrian: putih, seperti kertas sungguhan */
+  --ticket: #ffffff;
+  --on-ticket: #0d2924;
+  --ticket-line: rgb(13 41 36 / 0.35);
+  --ticket-go: #0a5e50;
 
   /* Layar ruang tunggu dan kiosk: selalu gelap, seperti perangkatnya */
-  --board: #0f1b36;
-  --board-2: #1a2a52;
-  --on-board: #f2f5fc;
+  --board: #06211c;
+  --board-2: #0d3b32;
+  --board-edge: #1b5547;
+  --board-mute: #9fcbbe;
+  --board-soft: #cde8e0;
+  --board-empty: #5f8c80;
+  --on-board: #e8f5f1;
 
   --radius: 16px;
   --radius-lg: 28px;
-  --shadow: 0 1px 0 rgb(18 32 63 / 0.06), 0 16px 32px -20px rgb(18 32 63 / 0.4);
+  --shadow: 0 1px 0 rgb(8 60 50 / 0.06), 0 16px 32px -20px rgb(8 60 50 / 0.4);
 
   /* Skala huruf, diubah oleh tombol A di bilah atas */
   --fs: 1;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --paper: #0b1326;
-    --surface: #142040;
-    --surface-2: #1b2a52;
-    --ink: #edf1fa;
-    --muted: #aab7d4;
-    --line: #2f3f6b;
-    --brand: #9cc0ff;
-    --on-brand: #0b1630;
-    --focus: #7fb0ff;
-    --ok: #6fd6a3;
-    --ok-bg: #12372a;
-    --warn: #ffc580;
-    --warn-bg: #3a2a0e;
-    --shadow: 0 16px 32px -20px rgb(0 0 0 / 0.8);
-    color-scheme: dark;
-  }
-}
-
-:root[data-theme="dark"] {
-  --paper: #0b1326;
-  --surface: #142040;
-  --surface-2: #1b2a52;
-  --ink: #edf1fa;
-  --muted: #aab7d4;
-  --line: #2f3f6b;
-  --brand: #9cc0ff;
-  --on-brand: #0b1630;
-  --focus: #7fb0ff;
-  --ok: #6fd6a3;
-  --ok-bg: #12372a;
-  --warn: #ffc580;
-  --warn-bg: #3a2a0e;
-  --shadow: 0 16px 32px -20px rgb(0 0 0 / 0.8);
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 /* Kontras tinggi: garis dan teks pendukung memakai warna teks utama */

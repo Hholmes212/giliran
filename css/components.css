@@ -5,7 +5,7 @@
 
 /* ---------- Kertas nomor antrian ---------- */
 .ticket-wrap {
-  filter: drop-shadow(0 18px 22px rgb(18 32 63 / 0.28));
+  filter: drop-shadow(0 18px 22px rgb(8 60 50 / 0.3));
   animation: print-out 0.9s cubic-bezier(0.2, 0.8, 0.25, 1) backwards;
 }
 @keyframes print-out {
@@ -32,12 +32,12 @@
 .ticket__clinic { font-size: 0.9rem; font-weight: 700; opacity: 0.8; }
 .ticket__label { margin-top: 0.8rem; font-weight: 700; }
 .ticket__no {
-  font: 800 clamp(4.2rem, 13vw, 6.4rem)/0.95 var(--font-display);
-  letter-spacing: -0.04em; font-variant-numeric: tabular-nums;
+  font: 700 clamp(4.6rem, 15vw, 7.2rem)/0.88 var(--font-num);
+  letter-spacing: 0; font-variant-numeric: tabular-nums; white-space: nowrap;
 }
 .ticket__svc { font-weight: 700; font-size: 1.15rem; display: flex; flex-wrap: wrap; gap: 0.3rem 0.7rem; align-items: center; }
 .ticket__stub {
-  border-top: 3px dashed rgb(43 32 0 / 0.5);
+  border-top: 3px dashed var(--ticket-line);
   padding: 0.7rem 1.6rem; display: flex; flex-direction: column; justify-content: center; gap: 0.1rem;
   transition: background-color 0.4s ease, color 0.4s ease;
 }
@@ -54,7 +54,7 @@
 }
 .pill--prio { background: var(--warn-bg); color: var(--warn); }
 .pill--ok { background: var(--ok-bg); color: var(--ok); }
-.ticket .pill { background: rgb(43 32 0 / 0.14); color: var(--on-ticket); }
+.ticket .pill { background: #d4f1e3; color: #0a5e50; }
 
 /* ---------- Progres langkah ---------- */
 .progress { display: grid; gap: 0.5rem; margin-bottom: 1.6rem; font-weight: 700; color: var(--muted); }
@@ -74,8 +74,8 @@
 .choice:hover { border-color: var(--brand); transform: translateY(-1px); }
 .choice__chip {
   display: grid; place-items: center; width: 3.4rem; height: 3.4rem; border-radius: 0.9rem;
-  background: var(--ticket); color: var(--on-ticket);
-  font: 800 1.9rem/1 var(--font-display);
+  background: var(--accent); color: var(--on-accent);
+  font: 700 2.4rem/1 var(--font-num);
 }
 .choice__body { display: grid; gap: 0.1rem; min-width: 0; }
 .choice__body b { font-size: 1.25rem; }

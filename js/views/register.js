@@ -79,7 +79,7 @@
           : "Tidak ada";
         return progress() +
           '<h1 class="q">Periksa sebentar</h1>' +
-          '<p class="q-help">Kalau sudah benar, sentuh tombol kuning.</p>' +
+          '<p class="q-help">Kalau sudah benar, sentuh tombol Ambil nomor antrian.p>' +
           '<dl class="summary">' +
             '<div><dt>Layanan</dt><dd>' + sv.label + '</dd></div>' +
             '<div><dt>Nama</dt><dd>' + ui.esc(data.name) + '</dd></div>' +
