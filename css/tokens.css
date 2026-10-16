@@ -1,0 +1,88 @@
+/* ==========================================================================
+   Giliran: design tokens
+   Semua warna dan ukuran dasar ada di sini. Ubah di sini, seluruh situs ikut.
+   ========================================================================== */
+
+:root {
+  /* Huruf. Atkinson Hyperlegible dirancang untuk pembaca dengan penglihatan terbatas. */
+  --font-display: "Bricolage Grotesque", "Atkinson Hyperlegible", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Warna (tema terang) */
+  --paper: #f3f5fa;
+  --surface: #ffffff;
+  --surface-2: #e8edf6;
+  --ink: #12203f;
+  --muted: #44516e;
+  --line: #c9d1e2;
+  --brand: #1b3a6b;
+  --on-brand: #ffffff;
+  --focus: #0b5fff;
+
+  /* Warna status */
+  --ok: #16714a;
+  --ok-bg: #d9f2e5;
+  --warn: #8a4b00;
+  --warn-bg: #ffe8c4;
+
+  /* Kertas nomor antrian: sama di tema terang dan gelap, seperti kertas sungguhan */
+  --ticket: #ffc53d;
+  --on-ticket: #2b2000;
+  --ticket-go: #16714a;
+
+  /* Layar ruang tunggu dan kiosk: selalu gelap, seperti perangkatnya */
+  --board: #0f1b36;
+  --board-2: #1a2a52;
+  --on-board: #f2f5fc;
+
+  --radius: 16px;
+  --radius-lg: 28px;
+  --shadow: 0 1px 0 rgb(18 32 63 / 0.06), 0 16px 32px -20px rgb(18 32 63 / 0.4);
+
+  /* Skala huruf, diubah oleh tombol A di bilah atas */
+  --fs: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0b1326;
+    --surface: #142040;
+    --surface-2: #1b2a52;
+    --ink: #edf1fa;
+    --muted: #aab7d4;
+    --line: #2f3f6b;
+    --brand: #9cc0ff;
+    --on-brand: #0b1630;
+    --focus: #7fb0ff;
+    --ok: #6fd6a3;
+    --ok-bg: #12372a;
+    --warn: #ffc580;
+    --warn-bg: #3a2a0e;
+    --shadow: 0 16px 32px -20px rgb(0 0 0 / 0.8);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --paper: #0b1326;
+  --surface: #142040;
+  --surface-2: #1b2a52;
+  --ink: #edf1fa;
+  --muted: #aab7d4;
+  --line: #2f3f6b;
+  --brand: #9cc0ff;
+  --on-brand: #0b1630;
+  --focus: #7fb0ff;
+  --ok: #6fd6a3;
+  --ok-bg: #12372a;
+  --warn: #ffc580;
+  --warn-bg: #3a2a0e;
+  --shadow: 0 16px 32px -20px rgb(0 0 0 / 0.8);
+  color-scheme: dark;
+}
+
+/* Kontras tinggi: garis dan teks pendukung memakai warna teks utama */
+:root[data-contrast="high"] {
+  --muted: var(--ink);
+  --line: var(--ink);
+}

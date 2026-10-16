@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Giliran</title>
+  <meta name="description" content="Prototipe antrian pendaftaran berobat yang mudah dipakai lansia: layar, WhatsApp, kiosk, panel petugas, dan layar ruang tunggu.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&display=swap">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/views.css">
+</head>
+<body>
+  <a class="skip" href="#view">Langsung ke isi halaman</a>
+
+  <header class="topbar">
+    <div class="topbar__in wrap">
+      <a class="brand" href="#beranda" aria-label="Giliran, kembali ke beranda">
+        <svg viewBox="0 0 32 32" width="34" height="34" aria-hidden="true">
+          <path fill="var(--ticket)" d="M6 5h20a2 2 0 012 2v5a4 4 0 000 8v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5a4 4 0 000-8V7a2 2 0 012-2z"/>
+          <path d="M11 11h10M11 16h10M11 21h6" stroke="#2B2000" stroke-width="2" stroke-linecap="round" fill="none"/>
+        </svg>
+        <span>Giliran</span>
+      </a>
+
+      <nav class="nav" aria-label="Menu utama">
+        <div class="nav__scroll">
+          <a href="#beranda" data-route="beranda">Beranda</a>
+          <a href="#daftar" data-route="daftar">Daftar</a>
+          <a href="#whatsapp" data-route="whatsapp">WhatsApp</a>
+          <a href="#kiosk" data-route="kiosk">Kiosk</a>
+          <a href="#petugas" data-route="petugas">Petugas</a>
+          <a href="#layar" data-route="layar">Ruang tunggu</a>
+        </div>
+      </nav>
+
+      <div class="a11y" role="group" aria-label="Pengaturan tampilan">
+        <div class="a11y__size" role="group" aria-label="Ukuran huruf">
+          <button type="button" data-size="1" aria-label="Huruf normal" aria-pressed="true">A</button>
+          <button type="button" data-size="1.18" aria-label="Huruf besar" aria-pressed="false">A</button>
+          <button type="button" data-size="1.36" aria-label="Huruf sangat besar" aria-pressed="false">A</button>
+        </div>
+        <button type="button" id="btnContrast" class="a11y__btn" aria-pressed="false">Kontras</button>
+        <button type="button" id="btnVoice" class="a11y__btn" aria-pressed="true">Suara</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="view" tabindex="-1"></main>
+
+  <footer class="footer">
+    <div class="wrap footer__in">
+      <p>Giliran adalah prototipe untuk belajar dan diskusi. Semua nama di halaman ini hanya contoh, jadi jangan dipakai untuk data pasien sungguhan.</p>
+      <button type="button" id="btnReset" class="btn btn--ghost">Mulai ulang data contoh</button>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/queue.js"></script>
+  <script src="js/speech.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/views/home.js"></script>
+  <script src="js/views/register.js"></script>
+  <script src="js/views/whatsapp.js"></script>
+  <script src="js/views/kiosk.js"></script>
+  <script src="js/views/staff.js"></script>
+  <script src="js/views/display.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
